@@ -1,0 +1,37 @@
+.cup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 500px;
+  border: 6px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  animation: animate 10s linear infinite;
+  box-shadow: 0 0 0 6px #fff;
+  transition: background-position-y 0.25s;
+}
+
+.cup::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  border: 6px solid #fff;
+  right: -68px;
+  top: 30px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 2000px;
+  }
+}
